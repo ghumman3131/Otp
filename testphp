@@ -1,0 +1,25 @@
+<?php
+
+
+$output = array();
+
+$sql_query = mysqli_query($connection , "select * from joining where user_id ='2'");
+
+while($rows = mysqli_fetch_array($sql_query))
+	
+	{
+
+$group_id = $rows['group_id'];
+$sql_query2 = mysqli_query($connection , "select * from groups where group_id ='$group_id'");
+
+$output = mysqli_fetch_assoc($sql_query2);
+
+
+	}
+	
+	$response['result'] = $output;
+	
+	echo json_encode($response);
+	
+	
+?>
