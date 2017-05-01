@@ -1,0 +1,11 @@
+Location startPoint=new Location("locationA");
+        startPoint.setLatitude(31.633979);
+        startPoint.setLongitude(74.872264);
+
+        Location endPoint=new Location("locationA");
+        endPoint.setLatitude(30.733315);
+        endPoint.setLongitude(76.779418);
+
+        double distance=startPoint.distanceTo(endPoint);
+
+        System.out.println(distance);
